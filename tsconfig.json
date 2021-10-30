@@ -32,7 +32,8 @@
       "@types/node",
       "@types/jest",
       "@nuxtjs/auth-next",
-      "@pinia/nuxt"
+      "@pinia/nuxt",
+      "@nuxtjs/device"
     ]
   },
   "exclude": [

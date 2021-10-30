@@ -42,7 +42,9 @@ export default {
     // https://composition-api.nuxtjs.org/getting-started/setup
     '@nuxtjs/composition-api/module',
     // https://pinia.esm.dev/ssr/nuxt.html#installation
-    ['@pinia/nuxt', { disableVuex: false }]
+    ['@pinia/nuxt', { disableVuex: false }],
+    // https://github.com/nuxt-community/device-module
+    '@nuxtjs/device',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

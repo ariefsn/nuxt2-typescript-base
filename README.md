@@ -8,6 +8,7 @@
 - [Nuxt Composition Api](https://composition-api.nuxtjs.org/)
 - [Nuxt Axios](https://axios.nuxtjs.org/)
 - [Nuxt Auth](https://auth.nuxtjs.org/)
+- [Nuxt Device](https://github.com/nuxt-community/device-module)
 - [Dotenv](https://github.com/motdotla/dotenv#readme)
 - [DayJS](https://day.js.org/)
 - [Pinia](https://pinia.esm.dev/)
