@@ -9,9 +9,16 @@
 - [Nuxt Axios](https://axios.nuxtjs.org/)
 - [Nuxt Auth](https://auth.nuxtjs.org/)
 - [Nuxt Device](https://github.com/nuxt-community/device-module)
+- [Nuxt i18n](https://i18n.nuxtjs.org/)
 - [Dotenv](https://github.com/motdotla/dotenv#readme)
 - [DayJS](https://day.js.org/)
 - [Pinia](https://pinia.esm.dev/)
+
+## i18n
+
+1. Define interface `/models/common/i18n.ts` for `Ii18n`
+2. Create lang file `/i18n/<lang>.ts`
+3. Setting configuration `nuxt.config.js`
 
 ## Build Setup
 

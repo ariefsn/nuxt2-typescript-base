@@ -24,7 +24,7 @@ export default {
     '@/plugins/datetime',
     '@/plugins/utils',
     '@/plugins/env',
-    '@/plugins/axios',
+    '@/plugins/axios'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -54,7 +54,9 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://auth.nuxtjs.org/guide/setup,
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next',
+    // https://i18n.nuxtjs.org/
+    '@nuxtjs/i18n'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -90,6 +92,25 @@ export default {
     manifest: {
       lang: 'en'
     }
+  },
+
+  // i18n module configuration: https://i18n.nuxtjs.org/options-reference
+  i18n: {
+    lazy: true,
+    langDir: 'i18n/',
+    defaultLocale: 'id',
+    locales: [
+      {
+        code: 'id',
+        name: 'Bahasa Indonesia',
+        file: 'id-ID.ts'
+      },
+      {
+        code: 'en',
+        name: 'English',
+        file: 'en-US.ts'
+      },
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

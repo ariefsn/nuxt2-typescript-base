@@ -20,9 +20,6 @@
       <br />
       Double count: {{ counter.doubleCount }}
       <br />
-      Device: {{ $device.userAgent }}
-    </div>
-    <div>
       <button
         class="bg-green-300 hover:bg-green-500 hover:text-white px-4 py-2 rounded-sm"
         @click="counter.increment"
@@ -32,13 +29,33 @@
         @click="counter.decrement"
       >Decrement</button>
     </div>
+    <div class="mb-3">
+      <span class="font-bold">Device</span>
+      <br />
+      Device: {{ $device.userAgent }}
+    </div>
+    <div class="mb-3">
+      <span class="font-bold">i18n</span>
+      <br />
+      <div class="mb-0">
+        Hai: {{ $t('hello') }}
+      </div>
+      <br />
+      <NuxtLink
+        v-for="local in locales"
+        :key="local.code"
+        class="bg-green-300 hover:bg-green-500 hover:text-white px-4 py-2 rounded-sm"
+        :to="switchLocalePath(local.code)"
+      >{{ local.name }}</NuxtLink>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { computed, defineComponent, useContext } from '@nuxtjs/composition-api'
 import { useCounterStore } from '@/store'
 import nuxtLogo from '@/assets/images/svg/nuxt-logo.svg'
+import { Ii18nConfig } from '~/models/common'
 
 export default defineComponent({
 	props: {
@@ -48,9 +65,15 @@ export default defineComponent({
 		},
 	},
 	setup: () => {
+		const { i18n } = useContext()
 		const counter = useCounterStore()
 
+		const locales = computed<Ii18nConfig[]>(() =>
+			(i18n.locales as Ii18nConfig[]).filter(e => e.code !== i18n.locale)
+		)
+
 		return {
+			locales,
 			nuxtLogo,
 			counter,
 		}
