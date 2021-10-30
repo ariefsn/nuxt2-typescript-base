@@ -11,5 +11,6 @@ export default defineComponent({
 	components: {
 		ExampleCompositionApi,
 	},
+  middleware: ['exampleMiddleware'],
 })
 </script>
